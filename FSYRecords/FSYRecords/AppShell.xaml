@@ -83,10 +83,10 @@
     
     <!--Ingreso-->
     <FlyoutItem Title="Ingreso" Icon="tongue.png">
-        <Tab Icon="qr.png">
+        <Tab Icon="qr.png" Title="QR">
             <ShellContent Route="CheckInQRPage" ContentTemplate="{DataTemplate local:CheckInQRPage}" />
         </Tab>
-        <Tab Icon="check_mark.png">
+        <Tab Icon="check_mark.png" Title="Manual">
             <ShellContent Route="CheckInManualPage" ContentTemplate="{DataTemplate local:CheckInManualPage}" />
         </Tab>
     </FlyoutItem>
@@ -96,7 +96,7 @@
         <Tab Title="QR" Icon="qr.png" >
             <ShellContent Route="BreakfastQRPage" ContentTemplate="{DataTemplate local:BreakfastQRPage}" />
         </Tab>
-        <Tab Icon="check_mark.png">
+        <Tab Icon="check_mark.png" Title="Manual">
             <ShellContent Route="BreakfastManualPage" ContentTemplate="{DataTemplate local:BreakfastManualPage}" />
         </Tab>
     </FlyoutItem>
