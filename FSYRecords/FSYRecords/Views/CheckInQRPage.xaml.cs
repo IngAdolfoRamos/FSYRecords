@@ -4,23 +4,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace FSYRecords.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginPage : ContentPage
+    public partial class CheckInQRPage : ContentPage
     {
-        public LoginPage()
+        public CheckInQRPage()
         {
             InitializeComponent();
-            this.BindingContext = new LoginViewModel();
-        }
-
-        private void Entry_Focused(object sender, FocusEventArgs e)
-        {
-
+            BindingContext = new CheckInQRPageViewModel();
         }
     }
 }

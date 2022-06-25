@@ -6,20 +6,45 @@
              mc:Ignorable="d"
              x:Class="FSYRecords.Views.LoginPage"
              Shell.NavBarIsVisible="False"
-             Shell.FlyoutBehavior="Disabled">
+             Shell.FlyoutBehavior="Disabled"
+             Visual="Default">
 
-    <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+    <ScrollView>
 
-        <Image />
+        <StackLayout HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand">
 
-        <Entry></Entry>
+            <StackLayout Padding="40,10,40,0">
 
-        <Entry></Entry>
+                <Frame Padding="0"
+                   CornerRadius="30"
+                   IsClippedToBounds="True"
+                   Margin="0,30,0,40">
 
-        <Button VerticalOptions="Center" 
-                Text="Login" 
-                Command="{Binding LoginCommand}"/>
+                    <Image Source="logo_letters.png"/>
+
+                </Frame>
+
+            </StackLayout>
+
+            <StackLayout Padding="30">
+
+                <Entry Keyboard="Text"
+                       Placeholder="Usuario"/>
+
+                <Entry IsPassword="True"
+                       Placeholder="Contraseña"/>
+
+                <Button VerticalOptions="Center" 
+                        Text="Login" 
+                        Command="{Binding LoginCommand}"
+                        CornerRadius="30"
+                        Margin="0,35,0,0"/>
+                
+            </StackLayout>
             
-    </StackLayout>
+        </StackLayout>
+
+    </ScrollView>
 
 </ContentPage>
