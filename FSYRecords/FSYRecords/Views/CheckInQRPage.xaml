@@ -17,13 +17,22 @@
     
     <StackLayout>
 
+        <Label x:Name="scanResult" />
+
         <Frame CornerRadius="25"
                Padding="0"
                Margin="20,20,20,10"
                BackgroundColor="red"
                HeightRequest="500">
 
-            <zxing:ZXingScannerView IsScanning="True"/>
+            <zxing:ZXingScannerView IsScanning="True"
+                                    IsAnalyzing="True"
+                                    OnScanResult="ZXingScannerView_OnScanResult"/>
+            
+            <!--<zxing:ZXingScannerView IsScanning="True"
+                                    IsAnalyzing="True"
+                                    ScanResultCommand="{Binding ScanResultCommand}"
+                                    Result="{Binding Result}"/>-->
 
         </Frame>
 

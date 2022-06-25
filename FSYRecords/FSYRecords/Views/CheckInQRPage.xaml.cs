@@ -1,4 +1,6 @@
-﻿using FSYRecords.ViewModels;
+﻿using Android.Content;
+using Android.Widget;
+using FSYRecords.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +19,15 @@ namespace FSYRecords.Views
         {
             InitializeComponent();
             BindingContext = new CheckInQRPageViewModel();
+        }
+
+        private void ZXingScannerView_OnScanResult(ZXing.Result result)
+        {
+            Device.BeginInvokeOnMainThread(() =>
+                scanResult.Text = result.Text + " (tipo : " +
+                result.BarcodeFormat.ToString() + ")");
+
+
         }
     }
 }

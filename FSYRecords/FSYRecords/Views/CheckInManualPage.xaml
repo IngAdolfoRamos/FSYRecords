@@ -3,11 +3,62 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FSYRecords.Views.CheckInManualPage"
              Title="Ingreso">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Check in manual"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+
+    <StackLayout Padding="20">
+
+        <Picker Title="Seleccionar grupo"
+                TitleColor="Red">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Grupo 1</x:String>
+                    <x:String>Grupo 2</x:String>
+                    <x:String>Grupo 3</x:String>
+                    <x:String>Grupo 4</x:String>
+                    <x:String>Grupo 5</x:String>
+                    <x:String>Grupo 6</x:String>
+                    <x:String>Grupo 7</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <ListView>
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Luis Adolfo Ramos Morales (27)</x:String>
+                    <x:String>Roberto Enrique Ramos Morales (40)</x:String>
+                    <x:String>Yael Kaled Castillo R (13)</x:String>
+                    <x:String>Selina Marisol Cruz P (18)</x:String>
+                    <x:String>Alvin Josue Gomez G (14)</x:String>
+                    <x:String>Alma Abril Gomez H (18)</x:String>
+                    <x:String>Brayan Gutierrez G (27)</x:String>
+                    <x:String>Yoana Aretzi Gutierrez S (15)</x:String>
+                    <x:String>Mariel Joana Hernandez S (15)</x:String>
+                    <x:String>Selina Marisol Cruz P (18)</x:String>
+                    <x:String>Alvin Josue Gomez G (14)</x:String>
+                    <x:String>Alma Abril Gomez H (18)</x:String>
+                    <x:String>Brayan Gutierrez G (27)</x:String>
+                    <x:String>Yoana Aretzi Gutierrez S (15)</x:String>
+                    <x:String>Mariel Joana Hernandez S (15)</x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <CheckBox IsChecked="False"/>
+                            <Label Text="{Binding .}" 
+                                   HorizontalOptions="StartAndExpand"
+                                   VerticalOptions="Center"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Text="Guardar" 
+                BackgroundColor="{StaticResource PrimaryDark}"
+                CornerRadius="20"/>
+
+    </StackLayout>
+
 </ContentPage>

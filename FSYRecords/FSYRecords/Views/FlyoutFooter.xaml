@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FSYRecords.Views.FlyoutFooter">
+
+    <Frame BackgroundColor="White">
+        <Label Text=""
+               TextColor="CadetBlue"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center" />
+    </Frame>
+
+</ContentView>
