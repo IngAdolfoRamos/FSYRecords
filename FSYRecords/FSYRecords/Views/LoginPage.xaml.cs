@@ -17,10 +17,5 @@ namespace FSYRecords.Views
             InitializeComponent();
             this.BindingContext = new LoginViewModel();
         }
-
-        private void Entry_Focused(object sender, FocusEventArgs e)
-        {
-
-        }
     }
 }

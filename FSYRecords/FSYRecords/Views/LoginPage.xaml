@@ -7,7 +7,7 @@
              x:Class="FSYRecords.Views.LoginPage"
              Shell.NavBarIsVisible="False"
              Shell.FlyoutBehavior="Disabled"
-             Visual="Default">
+             Visual="Material">
 
     <ScrollView>
 
@@ -17,9 +17,10 @@
             <StackLayout Padding="40,10,40,0">
 
                 <Frame Padding="0"
-                   CornerRadius="30"
-                   IsClippedToBounds="True"
-                   Margin="0,30,0,40">
+                       CornerRadius="30"
+                       IsClippedToBounds="True"
+                       Margin="0,30,0,40"
+                       BorderColor="Transparent">
 
                     <Image Source="logo_letters.png"/>
 
@@ -30,16 +31,28 @@
             <StackLayout Padding="30">
 
                 <Entry Keyboard="Text"
-                       Placeholder="Usuario"/>
+                       Placeholder="Usuario"
+                       PlaceholderColor="White"
+                       FontSize="Large"
+                       TextColor="White"
+                       BackgroundColor="{StaticResource Primary}"
+                       Margin="0,0,0,10"/>
 
                 <Entry IsPassword="True"
-                       Placeholder="Contraseña"/>
+                       Placeholder="Contraseña"
+                       PlaceholderColor="White"
+                       FontSize="Large"
+                       TextColor="White"
+                       BackgroundColor="{StaticResource Primary}"
+                       />
 
                 <Button VerticalOptions="Center" 
-                        Text="Login" 
+                        Text="Iniciar sesión" 
                         Command="{Binding LoginCommand}"
-                        CornerRadius="30"
-                        Margin="0,35,0,0"/>
+                        CornerRadius="20"
+                        HeightRequest="45"
+                        Margin="0,35,0,0"
+                        BackgroundColor="{StaticResource PrimaryDark}"/>
                 
             </StackLayout>
             
