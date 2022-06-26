@@ -134,7 +134,11 @@
     <!--Conteo Nocturno-->
     <FlyoutItem Title="Conteo nocturno" Icon="moon.png">
         <Tab Title="QR" Icon="qr.png">
-            <ShellContent Route="CheckOutQR" ContentTemplate="{DataTemplate local:CheckOutQRPage}"/>
+            <ShellContent Route="NightQRPage" ContentTemplate="{DataTemplate local:NightQRPage}"/>
+        </Tab>
+        <Tab Title="Manual" Icon="check_mark.png">
+            <ShellContent Route="NightManualPage"
+                          ContentTemplate="{DataTemplate local:NightManualPage}"/>
         </Tab>
     </FlyoutItem>
 
