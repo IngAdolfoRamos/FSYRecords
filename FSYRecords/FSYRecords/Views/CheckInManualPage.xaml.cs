@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FSYRecords.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace FSYRecords.Views
         public CheckInManualPage()
         {
             InitializeComponent();
+            BindingContext = new CheckInManualPageViewModel();
         }
     }
 }
