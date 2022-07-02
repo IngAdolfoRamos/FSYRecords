@@ -1,5 +1,6 @@
 ﻿using FSYRecords.Models;
 using FSYRecords.Views;
+using MvvmHelpers;
 using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
@@ -34,12 +35,12 @@ namespace FSYRecords.ViewModels
 
             try
             {
-                Items.Clear();
-                var items = await DataStore.GetItemsAsync(true);
-                foreach (var item in items)
-                {
-                    Items.Add(item);
-                }
+                //Items.Clear();
+                //var items = await DataStore.GetItemsAsync(true);
+                //foreach (var item in items)
+                //{
+                //    Items.Add(item);
+                //}
             }
             catch (Exception ex)
             {

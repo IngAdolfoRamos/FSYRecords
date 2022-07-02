@@ -28,7 +28,9 @@
             </Picker.ItemsSource>
         </Picker>
 
-        <ListView ItemsSource="{Binding People}">
+        <ListView ItemsSource="{Binding Person}"
+                  IsPullToRefreshEnabled="True"
+                  RefreshCommand="{Binding RefreshCommand}">
             <!--<ListView.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>Luis Adolfo Ramos Morales (27)</x:String>
