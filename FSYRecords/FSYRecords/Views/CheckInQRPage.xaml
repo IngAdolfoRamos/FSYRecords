@@ -25,9 +25,9 @@
                BackgroundColor="red"
                HeightRequest="500">
 
-            <zxing:ZXingScannerView IsScanning="True"
+            <!--<zxing:ZXingScannerView IsScanning="True"
                                     IsAnalyzing="True"
-                                    OnScanResult="ZXingScannerView_OnScanResult"/>
+                                    OnScanResult="ZXingScannerView_OnScanResult"/>-->
             
             <!--<zxing:ZXingScannerView IsScanning="True"
                                     IsAnalyzing="True"

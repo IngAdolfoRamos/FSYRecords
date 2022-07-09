@@ -1,6 +1,4 @@
-﻿using Android.Content;
-using Android.Widget;
-using FSYRecords.ViewModels;
+﻿using FSYRecords.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;

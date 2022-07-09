@@ -1,15 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:viewmodel="clr-namespace:FSYRecords.ViewModels"
-             xmlns:model="clr-namespace:FSYRecords.Models"
              x:Class="FSYRecords.Views.CheckInManualPage"
-             x:DataType="viewmodel:CheckInManualPageViewModel"
-             Title="Ingreso">
 
-    <ContentPage.BindingContext>
+             Title="Ingreso">
+    <!--x:DataType="viewmodel:CheckInManualPageViewModel"
+                 xmlns:viewmodel="clr-namespace:FSYRecords.ViewModels"
+             xmlns:model="clr-namespace:FSYRecords.Models"-->
+
+    <!--<ContentPage.BindingContext>
         <viewmodel:CheckInManualPageViewModel/>
-    </ContentPage.BindingContext>
+    </ContentPage.BindingContext>-->
 
     <StackLayout Padding="20">
 
@@ -28,10 +29,11 @@
             </Picker.ItemsSource>
         </Picker>
 
-        <ListView ItemsSource="{Binding Person}"
+        <!--<ListView ItemsSource="{Binding Person}"
                   IsPullToRefreshEnabled="True"
                   RefreshCommand="{Binding RefreshCommand}">
-            <!--<ListView.ItemsSource>
+            -->
+        <!--<ListView.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>Luis Adolfo Ramos Morales (27)</x:String>
                     <x:String>Roberto Enrique Ramos Morales (40)</x:String>
@@ -50,6 +52,7 @@
                     <x:String>Mariel Joana Hernandez S (15)</x:String>
                 </x:Array>
             </ListView.ItemsSource>-->
+        <!--
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="model:Person">
                     <ViewCell>
@@ -62,7 +65,23 @@
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-        </ListView>
+        </ListView>-->
+
+        <!--x:DataType="model:Person"-->
+        <CollectionView x:Name="collectionView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate >
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <CheckBox IsChecked="False"/>
+                            <Label Text="{Binding Name}" 
+                                   HorizontalOptions="StartAndExpand"
+                                   VerticalOptions="Center"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
 
         <Button Text="Guardar" 
                 BackgroundColor="{StaticResource PrimaryDark}"

@@ -21,7 +21,7 @@ namespace FSYRecords.ViewModels
             RefreshCommand = new AsyncCommand(Refresh);
 
             var people = PersonRepository.GetPeople();
-            Person.AddRange(people);
+            //Person.AddRange(people);
 
             //var people = PersonRepository.GetPeople();
             //Person.AddRange((IEnumerable<Person>)people);
